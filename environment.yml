@@ -1,0 +1,50 @@
+name: prosocial-dialog
+channels:
+  - defaults
+dependencies:
+  - cudatoolkit=10.2
+  - pytorch::pytorch=1.8.1
+  - python=3.9.4
+  - pip=20.2.3
+  - pip:
+    - parlai==1.7.1
+    - transformers==4.6.1
+    - fairseq==0.9.0
+    - pytorch-pretrained-bert==0.6.2
+    - torchtext==0.10.0
+    - spacy==2.3.2
+    # For logging
+    - tqdm~=4.38.0
+    - better-exceptions
+    - colorlog
+    - colorful
+    # For linting
+    - pylint
+    - pycodestyle
+    - mypy
+    # etc
+    - ordered-set==4.0.2
+    - ruamel.yaml==0.16.12
+    - more_itertools
+    - isort
+    - pudb
+    - jupyter
+    - black
+    - mypy
+    - mypy-extensions
+    - pandas >= 1.0.5         # need pd.NA feature for nullable integers
+    - praw
+    - Jinja2
+    - xmltodict
+    - yaspin
+    - ipython==7.19.0
+    - scikit-learn==0.23.1
+    - emoji==0.5.4
+    - rouge
+    - pyarrow
+    - tensorboard==2.3.0
+    - tensorboardX==2.1
+    - bert-score
+    - flask
+    - protobuf
+    - tokenizers==0.10.1

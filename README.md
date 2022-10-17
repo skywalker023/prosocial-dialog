@@ -1,19 +1,18 @@
 # ProsocialDialog
 
 Welcome! 👋🏻\
-This is the official repository of the ProsocialDialog dataset, Canary, and Prost from our paper: \
+This is the official repository of the ProsocialDialog dataset, Canary, and Prost from our EMNLP 2022 paper: \
 **[ProsocialDialog: A Prosocial Backbone for Conversational Agents.](https://hyunw.kim/papers/prosocial-dialog.pdf)**
 
 ![dialogue illustration](images/dialogue.png)
 
 Please cite our work if you found the resources in this repository useful:
 ```
-@article{kim2022prosocialdialog,
+@inproceedings{kim2022prosocialdialog,
     title={ProsocialDialog: A Prosocial Backbone for Conversational Agents},
     author={Hyunwoo Kim and Youngjae Yu and Liwei Jiang and Ximing Lu and Daniel Khashabi and Gunhee Kim and Yejin Choi and Maarten Sap},
-    journal={ArXiv},
-    year={2022},
-    volume={abs/2205.12688}
+    booktitle={EMNLP},
+    year=2022
 }
 ```
 
@@ -86,12 +85,27 @@ attribute | type | description
 `etc` | str\|null | other information
 `episode_done` | bool | an indicator of whether it is the end of the dialogue
 
-## Canary 🐥  & Prost 🍻
-We will be releasing our models in the near future!
+## Canary 🐥
+You can now download our Canary [here](https://storage.googleapis.com/ai2-mosaic-public/projects/prosocial-dialog/models/canary.tar.gz)!<br>
+The model will be automatically downloaded when you create Canary by calling the `Canary()` class.<br>
+Have a look at the [demo notebook](https://github.com/skywalker023/prosocial-dialog/blob/main/demo/canary_demo.ipynb) to see how you can load Canary and use it!
+
+### Environment setup
+
+Our code is built on the [ParlAI](https://parl.ai/) framework. We recommend you create a conda environment as follows
+
+```bash
+conda env create -f environment.yml
+```
+
+and activate it with
+
+```bash
+conda activate prosocial-dialog
+```
 
 ## Have any questions?
 Please contact [Hyunwoo Kim](https://hyunw.kim) at hyunw.kim at vl.snu.ac.kr
 
 ## License
-
 This repository is MIT licensed. See the [LICENSE](https://github.com/skywalker023/prosocial-dialog/blob/main/LICENSE) file for details.
