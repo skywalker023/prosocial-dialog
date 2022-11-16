@@ -7,7 +7,8 @@ This is the official repository of the ProsocialDialog dataset, Canary, and Pros
 ![dialogue illustration](images/dialogue.png)
 
 Please cite our work if you found the resources in this repository useful:
-```
+
+```bib
 @inproceedings{kim2022prosocialdialog,
     title={ProsocialDialog: A Prosocial Backbone for Conversational Agents},
     author={Hyunwoo Kim and Youngjae Yu and Liwei Jiang and Ximing Lu and Daniel Khashabi and Gunhee Kim and Yejin Choi and Maarten Sap},
@@ -17,11 +18,36 @@ Please cite our work if you found the resources in this repository useful:
 ```
 
 ## Dataset
-You can download our dataset directly by clicking this [link](https://drive.google.com/u/1/uc?id=1d-987AjyfVdFnohBqQ3yaHt-b5mVezHa&export=download&confirm=t).
 
-### Dataset format
+We provide two different formats of our dataset:
+
+* HuggingFace: dataframe format
+* Direct download: list of dialogues
+
+The only difference is the format; the contents are the same.
+
+### HuggingFace 🤗
+
+You can load our dataset from the HuggingFace hub as the following:
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("allenai/prosocial-dialog", split='train')
+prosocial_df = dataset.to_pandas()
+```
+
+💡 Note, the dataset format of the HuggingFace hub version and the direct download version is different. For the HuggingFace version, please take a look at the [dataset preview](https://huggingface.co/datasets/allenai/prosocial-dialog).
+
+### Direct download
+
+You can also download our dataset directly by clicking this [link](https://drive.google.com/u/1/uc?id=1d-987AjyfVdFnohBqQ3yaHt-b5mVezHa&export=download&confirm=t).
+
+#### Dataset format when downloaded directly using the link above
+
 Each split (train/valid/test) contains a list of dialogues. \
 A dialogue has the following structure:
+
 ```
 [
     {
@@ -86,8 +112,9 @@ attribute | type | description
 `episode_done` | bool | an indicator of whether it is the end of the dialogue
 
 ## Canary 🐥
-You can now download our Canary [here](https://storage.googleapis.com/ai2-mosaic-public/projects/prosocial-dialog/models/canary.tar.gz)!<br>
-The model will be automatically downloaded when you create Canary by calling the `Canary()` class.<br>
+
+You can now directly download our Canary [here](https://storage.googleapis.com/ai2-mosaic-public/projects/prosocial-dialog/models/canary.tar.gz)!<br>
+The model will also be automatically downloaded when you create Canary by calling the `Canary()` class.<br>
 Have a look at the [demo notebook](https://github.com/skywalker023/prosocial-dialog/blob/main/demo/canary_demo.ipynb) to see how you can load Canary and use it!
 
 ### Environment setup
@@ -105,7 +132,9 @@ conda activate prosocial-dialog
 ```
 
 ## Have any questions?
+
 Please contact [Hyunwoo Kim](https://hyunw.kim) at hyunw.kim at vl.snu.ac.kr
 
 ## License
+
 This repository is MIT licensed. See the [LICENSE](https://github.com/skywalker023/prosocial-dialog/blob/main/LICENSE) file for details.
