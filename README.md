@@ -28,7 +28,7 @@ The only difference is the format; the contents are the same.
 
 ### HuggingFace 🤗
 
-You can load our dataset from the HuggingFace hub as the following:
+You can load our dataset from the [HuggingFace hub](https://huggingface.co/datasets/allenai/prosocial-dialog) as the following:
 
 ```python
 from datasets import load_dataset
