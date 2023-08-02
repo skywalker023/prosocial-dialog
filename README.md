@@ -131,9 +131,14 @@ and activate it with
 conda activate prosocial-dialog
 ```
 
+## Looking for Prost?
+
+We currently have a new conversation model [🧑🏻‍🚀 COSMO](https://huggingface.co/allenai/cosmo-xl), which is significantly better than Prost, so we gently guide you to use COSMO instead of Prost. COSMO is also trained on ProsocialDialog and it comes with more controllability as you can give specific situation and role related prompts as input.
+
+
 ## Have any questions?
 
-Please contact [Hyunwoo Kim](https://hyunw.kim) at hyunw.kim at vl.snu.ac.kr
+Please contact [Hyunwoo Kim](https://hyunw.kim) at hyunwook ATTT allenai.org
 
 ## License
 
